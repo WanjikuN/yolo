@@ -6,6 +6,11 @@ services:
       MONGO_DB: yolomy
     ports:
       - 27017:27017
-  
+  yolo-client:
+    image: yolo-client_img:v1
+    environment: 
+      PORT: 3000
+      PROXY_API: http://yolo-backend:5000/
+    ports: 3000:3000
   
     

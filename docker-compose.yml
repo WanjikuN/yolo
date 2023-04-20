@@ -1,0 +1,11 @@
+version: '1'
+services: 
+  yolo-db:
+    image: mongo:5.0.16
+    environment: 
+      MONGO_DB: yolomy
+    ports:
+      - 27017:27017
+  
+  
+    

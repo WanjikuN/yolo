@@ -32,5 +32,7 @@ services:
 networks:
   yolo-service:
     driver: bridge
+volumes:
+  yolo-data:
 
     

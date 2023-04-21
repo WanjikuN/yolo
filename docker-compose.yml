@@ -17,6 +17,8 @@ services:
       - "3000:3000"
     networks:
       - yolo-service
+    volumes:
+      - yolo-data:/etc/data/client
   yolo-backend:
     image: wanjikupatricia/yolo-backend_img:v1
     environment: 

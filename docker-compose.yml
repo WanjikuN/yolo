@@ -27,6 +27,8 @@ services:
       - "5000:5000"
     networks:
       - yolo-service
+    volumes:
+      - yolo-data:/etc/data/backend
 networks:
   yolo-service:
     driver: bridge

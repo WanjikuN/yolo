@@ -8,6 +8,8 @@ services:
       - 27017:27017
     networks:
       - yolo-service
+     volumes:
+      - yolo-data:/etc/data/backend
   yolo-client:
     image: wanjikupatricia/yolo-client_img:v1
     environment: 
@@ -17,8 +19,7 @@ services:
       - "3000:3000"
     networks:
       - yolo-service
-    volumes:
-      - yolo-data:/etc/data/client
+    
   yolo-backend:
     image: wanjikupatricia/yolo-backend_img:v1
     environment: 
@@ -27,8 +28,7 @@ services:
       - "5000:5000"
     networks:
       - yolo-service
-    volumes:
-      - yolo-data:/etc/data/backend
+    
 networks:
   yolo-service:
     driver: bridge

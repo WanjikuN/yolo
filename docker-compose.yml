@@ -5,7 +5,7 @@ services:
     environment: 
       MONGO_DB: yolomy
     ports:
-      - 27017:27017
+      - 2717:27017
     networks:
       - yolo-service
     volumes:

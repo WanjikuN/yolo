@@ -1,9 +1,9 @@
 FROM node:lts-slim as build
 label maintainer="Patricia Wanjiku <cikunjoroge4@gmail.com>"
 WORKDIR /app
-COPY client/package.json ./
+COPY package*.json ./
 RUN npm install 
-COPY client/ .
+COPY . .
 RUN npm run build 
 FROM node:alpine as main
 COPY --from=build /app /

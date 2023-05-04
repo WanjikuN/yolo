@@ -11,7 +11,7 @@ services:
     volumes:
       - yolo-data:/etc/data/backend
   yolo-client:
-    image: wanjikupatricia/yolo-client_img:v2
+    image: wanjikupatricia/yolo-client_img:v1.0.0.1
     environment: 
       PORT: 3000
       PROXY_API: http://yolo-backend:5000/
@@ -21,7 +21,7 @@ services:
       - yolo-service
     
   yolo-backend:
-    image: wanjikupatricia/yolo-backend_img:v1
+    image: wanjikupatricia/yolo-backend_img:v1.0.0.1
     environment: 
       MONGODB_URI: mongodb://yolo-db:27017/yolomy
     ports: 

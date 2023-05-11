@@ -2,6 +2,6 @@
 # tasks file for docker-compoose
 - name: Docker Compose up
   become: True
-  shell: docker-compose -f /home/WanjikuN/yolo/docker-compose.yml up -d
-  args:
-    executable: /bin/bash
+  shell: 
+    cmd: "docker-compose -f docker-compose.yml up -d"
+    chdir: "{{ dest }}"

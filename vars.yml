@@ -1,0 +1,5 @@
+#Git clone variables
+#git repo
+repo: "https://github.com/WanjikuN/yolo.git"
+#repo destination
+dest: "/home/WanjikuN/yolo"

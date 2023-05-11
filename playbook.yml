@@ -10,6 +10,10 @@
     - name: Update apt cache
       apt:
         update_cache: yes
-  
+  tasks:
+    - name: Install git
+      include_role:
+        name: git
+       
 
     

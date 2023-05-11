@@ -10,7 +10,7 @@
     - name: Update apt cache
       apt:
         update_cache: yes
-        
+
   tasks:
     - name: Install git
       include_role:
@@ -21,6 +21,10 @@
         repo: "{{ repo }}"
         version: "{{ yolo_version }}"
         dest: "{{ dest }}"
+   
+    - name: Install docker and docker-compose
+      include_role:
+        name: docker
 
           
 

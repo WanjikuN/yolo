@@ -10,6 +10,7 @@
     - name: Update apt cache
       apt:
         update_cache: yes
+        
   tasks:
     - name: Install git
       include_role:
@@ -19,7 +20,7 @@
       git:
         repo: "{{ repo }}"
         version: "{{ yolo_version }}"
-        dest: "{{ dest}}"
+        dest: "{{ dest }}"
 
           
 

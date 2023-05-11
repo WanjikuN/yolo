@@ -1,1 +1,1 @@
-WanjikuN ansible_host=192.168.60.10 ansible_port=2205 
+WanjikuN ansible_host=172.22.160.1 ansible_port=2222

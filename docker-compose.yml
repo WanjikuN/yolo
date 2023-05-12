@@ -1,7 +1,7 @@
 version: '3.3'
 services: 
   yolo-db:
-    image: mongo:5.0.16
+    image: mongo:4.4.21
     environment: 
       MONGO_DB: yolomy
     ports:

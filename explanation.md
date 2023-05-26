@@ -98,3 +98,40 @@ npm install react-scripts
   
       ```
  5. Add products to the app and confirm data persistence
+---
+# Deploying to GKE
+
+## Steps
+Using the cloudshell:
+* Get your Google cloud project ID
+   ```
+   gcloud config get-value project
+   ```
+* Clone the App
+   ```
+   git clone <repoName>
+   ```
+* Create a cluster
+   ```
+      gcloud container clusters create-auto yolo --region us-central1
+   ```
+* Deploy to GKE
+    > Two objects . Deployment and Service
+    
+    1. Deploy the resource to the cluster
+        ```
+        kubectl apply -f deployment.yaml
+        kubectl get deployments
+        kubectl get pods
+        ```
+    1. Create service
+        ```
+        kubectl apply -f service.yaml
+        kubectl get services
+        ```
+        
+  ## View Deployed app
+  ```
+   http://EXTERNAL_IP
+  ```
+  ---

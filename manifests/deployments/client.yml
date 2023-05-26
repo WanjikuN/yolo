@@ -15,7 +15,7 @@ spec:
         app: client
     spec:
       containers:
-      - name: yolo_client
+      - name: yolo-client
         image: wanjikupatricia/yolo-client_img:v1.0.0.1
         ports:
         - containerPort: 3000

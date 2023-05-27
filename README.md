@@ -1,4 +1,4 @@
-[Yolo URL](http://35.193.118.162:3000/)
+[Yolo URL](http://34.29.101.149:3000/)
 ---
 # Deploying to GKE
 

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend-deployment
   labels:
-    app: client
+    app: backend
 spec:
   replicas: 1
   selector:

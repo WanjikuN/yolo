@@ -1,21 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: client-deployment
-  labels:
-    app: client
+  name: yolo-client
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: client
+      app: yolo-client
   template:
     metadata:
       labels:
-        app: client
+        app: yolo-client
     spec:
       containers:
-      - name: yolo-client
-        image: wanjikupatricia/yolo-client_img:v1.0.0.1
-        ports:
-        - containerPort: 3000
+        - name: yolo-client
+          image: wanjikupatricia/yolo-client_img:v1.0.0.1
+          env:
+            - name: PORT
+              value: "3000"
+            - name: PROXY_API
+              value: "http://yolo-backend:5000/"
+          ports:
+            - containerPort: 3000

@@ -1,4 +1,4 @@
-[Yolo URL](http://35.224.243.37:3000/)
+[Yolo URL]()
 ---
 # Deploying to GKE
 
@@ -42,10 +42,7 @@ Using the cloudshell:
         ```
       
         
-  ## View Deployed app
-  
-  http://35.224.243.37:3000/
-  
+   
   
 ---
 # Requirements
